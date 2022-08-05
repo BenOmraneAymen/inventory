@@ -1,0 +1,23 @@
+.editForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.layout{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 600px;
+    width: 600px;
+}
+
+.title{
+    font-size: 30px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}

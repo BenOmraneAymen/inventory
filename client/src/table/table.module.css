@@ -1,0 +1,51 @@
+.tableContainer{
+    min-width: 1400px;
+    width: 1700px;
+}
+
+.optionContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 1700px;
+    margin-top: 10px;
+}
+
+.searchContainer{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.showcreateMenu{
+    display: flex;
+    flex-direction: column;
+    width: 1700px;
+    height: 100px;
+    padding: 20px;
+    margin-left: 10px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.23);
+}
+.hiddencreateMenu{
+    display: none;
+}
+.createForm{
+    display: flex;
+    flex-direction: row;
+    width: 1700px;
+    height: 100px;
+    justify-content: space-around;
+}
+
+.editButton{
+    height: 30px;
+    width: 30px;
+    background-color: #e65100;
+}
+.table{
+    width: 1700px;
+}

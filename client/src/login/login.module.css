@@ -1,0 +1,36 @@
+.loginPage{
+    margin: 10vh 15vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.container{
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:whitesmoke;
+    width: 50%;
+    height: 80vh;
+}
+
+.loginForm{
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleContainer{
+    margin-left: 30px;
+}
+
+img{
+    width: 50%;
+    height: 80vh;
+}
+
+.Title{
+    font-size: 60px;
+    margin: 5px 0px;
+}
