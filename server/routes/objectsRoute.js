@@ -6,6 +6,7 @@ const Type = require('../models/type')
 const checkToken = require('../helpers/authFunctions')
 const { Op } = require("sequelize");
 const sequelize = require('../database')
+const pdfGeneration = require('../helpers/pdfGeneration')
 
 dotenv.config()
 
@@ -117,5 +118,39 @@ router.post('/delete',async (req,res)=>{
         res.status(400).json({err:'access denied'})
     }
 })
+
+router.post('/pdf',async (req,res)=>{
+    let type = await req.body.type
+    const accessToken = req.headers.authorization
+    let tokenvalidation = checkToken(accessToken,process.env.JWT_SECRET_KEY)
+    if(tokenvalidation){
+        if(type==='All')
+        {
+           /* const data = await Objet.findAll()
+            console.log(data)
+            res.json(data)   */
+            const [results, metadata] = await sequelize.query(
+                "SELECT * FROM types inner JOIN objets ON types.typeId = objets.typeId"
+              );
+              pdfGeneration(results,'total')
+              res.json({
+                status:200,
+                msg:'pdf downlowded'
+              })
+        }
+        else{
+            const [results, metadata] = await sequelize.query(
+                `SELECT * FROM types JOIN objets ON types.typeId = objets.typeId where types.typeName= '${type}' `
+              );
+              pdfGeneration(results,type)
+              res.json({
+                status:200,
+                msg:'pdf downlowded'
+              })
+        }
+    }else{
+        res.status(400).json({err:"access denied"})
+    }
+})  
 
 module.exports = router;

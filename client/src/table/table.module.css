@@ -6,10 +6,11 @@
 .optionContainer{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    width: 1700px;
+    width: 1600px;
     margin-top: 10px;
+    margin:10px 0px 10px 50px;   
 }
 
 .searchContainer{
@@ -48,4 +49,12 @@
 }
 .table{
     width: 1700px;
+}
+
+.buttons{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 210px;
 }

@@ -156,3 +156,11 @@ INSERT INTO `types` (`typeId`,`typeName`,`createdAt`,`updatedAt`,`userId`) VALUE
 INSERT INTO `objets` (`objectId`,`objetName`,`etat`,`number`,`createdAt`,`updatedAt`,`typeId`) VALUES (NULL,'armoire','bonne','7','2022-08-03 09:30:29.479 +00:00','2022-08-03 09:30:29.479 +00:00','29');
 UPDATE `objets` SET `objetName`='pc dell',`etat`='bonne',`number`='35',`updatedAt`='2022-08-03 09:32:04.991 +00:00' WHERE `objectId` = '11'
 UPDATE `types` SET `typeName`='informatique',`updatedAt`='2022-08-03 09:33:00.421 +00:00' WHERE `typeId` = '10'
+INSERT INTO `types` (`typeId`,`typeName`,`createdAt`,`updatedAt`,`userId`) VALUES (NULL,'mobilier','2022-08-15 09:46:22.212 +00:00','2022-08-15 09:46:22.212 +00:00','1');
+UPDATE `types` SET `typeName`='mobilier et instrument',`updatedAt`='2022-08-15 09:46:37.897 +00:00' WHERE `typeId` = '30'
+INSERT INTO `objets` (`objectId`,`objetName`,`etat`,`number`,`createdAt`,`updatedAt`,`typeId`) VALUES (NULL,'armoire','moyenne','11','2022-08-15 09:47:48.067 +00:00','2022-08-15 09:47:48.067 +00:00','30');
+UPDATE `objets` SET `objetName`='laptop hp',`etat`='moyenne',`number`='15',`updatedAt`='2022-08-15 09:48:58.899 +00:00' WHERE `objectId` = '10'
+INSERT INTO `objets` (`objectId`,`objetName`,`etat`,`number`,`createdAt`,`updatedAt`,`typeId`) VALUES (NULL,'pc bil mesmar','mauvaise','15','2022-09-02 13:34:49.421 +00:00','2022-09-02 13:34:49.421 +00:00','10');
+INSERT INTO `objets` (`objectId`,`objetName`,`etat`,`number`,`createdAt`,`updatedAt`,`typeId`) VALUES (NULL,'hama laptop','bonne','1','2022-09-02 13:39:07.586 +00:00','2022-09-02 13:39:07.586 +00:00','10');
+UPDATE `objets` SET `objetName`='pc brahim',`etat`='moyenne',`number`='10',`updatedAt`='2022-09-02 13:40:54.709 +00:00' WHERE `objectId` = '17'
+INSERT INTO `types` (`typeId`,`typeName`,`createdAt`,`updatedAt`,`userId`) VALUES (NULL,'robotique','2022-09-02 13:41:28.789 +00:00','2022-09-02 13:41:28.789 +00:00','1');

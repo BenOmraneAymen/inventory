@@ -8,6 +8,7 @@ const typeRoute = require('./routes/typesRoute.js')
 const objetRoute = require('./routes/objectsRoute.js')
 const cors = require("cors");
 
+
 dotenv.config()
 
 
@@ -29,4 +30,10 @@ app.use('/types',typeRoute)
 
 app.use('/objet',objetRoute)
 
+app.get('/some/route', function (req, res, next) {
+    pdf()
+ });
+
 app.listen(port,()=> {console.log(`listening on port ${port}...`)})
+
+

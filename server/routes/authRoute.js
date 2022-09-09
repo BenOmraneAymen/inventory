@@ -26,7 +26,6 @@ router.post('/users',async(req,res)=>{
 //checking and comparing the data sent and the data int the database
 router.post('/login', async (req,res)=>{
     try{
-        console.log('data',req.body)
         const {email,password} = req.body
         const user = await User.findOne({ where: { email: email } })
         if(user){
@@ -76,9 +75,7 @@ router.post('/login', async (req,res)=>{
 
 router.get("/validation",async (req,res)=>{
     const token =  req.headers.authorization
-    console.log(token)
     let result = checkToken(token,process.env.JWT_SECRET_KEY)
-    console.log(result)
     res.json({'validation':result})
 })
 

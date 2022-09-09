@@ -4,7 +4,6 @@ function checkToken(accessToken,jwtSecretKey){
     try {
         const token = accessToken.replace('Bearer ','')
         const verified = jwt.verify(token, jwtSecretKey);
-        console.log(verified)
         if(verified){
            return true
         }else{

@@ -58,6 +58,16 @@ function getobjet(type){
   })
 }
 
+function printPdf(type){
+  axios.post("http://localhost:4000/objet/pdf",{
+    type
+  },{ headers: {'Authorization': `Bearer ${token}`}}).then((res)=>{
+    alert('pdf downloded')
+  }).catch((err)=>{
+    console.log(err)
+  })
+}
+
 function addObjet(objetName,typeId,etat,number){
   axios.post("http://localhost:4000/objet/",{
     objetName,
@@ -118,14 +128,19 @@ React.useLayoutEffect(()=>{
                   search
               </Button>
           </div>
+          <div className={css['buttons']} >
           <Button color="success" variant="contained" onClick={()=>{showMenu()
                                                                     setObjetName('')
                                                                     setTypeName('')
                                                                     setEtat('')
                                                                     setNumber('')              
-                                                                              }} >
+                                                                  }} >
               Add object
           </Button>
+          <Button color="error" variant="contained" onClick={()=>{printPdf(props.type)}}>
+            Print
+          </Button>
+          </div>
       </div>
       <div className={css[MenuVisbility+'createMenu']} >
       <div className={css['createForm']} >
