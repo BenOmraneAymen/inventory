@@ -21,7 +21,7 @@ function pdfGeneration(items,title){
             footer: {
                 height: "28mm",
                 contents: {
-                    default: '<span style="color: #444;text-align: center;">{{page}}</span>/<span>{{pages}}</span>', // fallback value
+                    default: '<div style="display:flex;flex-direction:row;justify-content:center;"><span style="text-align: center;">{{page}}</span>/<span>{{pages}}</span></div>', // fallback value
                 }
             }
         };

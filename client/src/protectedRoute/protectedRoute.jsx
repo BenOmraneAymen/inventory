@@ -7,8 +7,6 @@ import { Navigate, useParams } from 'react-router'
 
 export default function ProtectedRoute({children}){   
 
-    let route = useParams()
-
     const [auth,setAuth] = useState(true)
     
     let jwt = localStorage.getItem("ACCESSTOKEN")

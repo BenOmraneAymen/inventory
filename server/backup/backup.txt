@@ -164,3 +164,13 @@ INSERT INTO `objets` (`objectId`,`objetName`,`etat`,`number`,`createdAt`,`update
 INSERT INTO `objets` (`objectId`,`objetName`,`etat`,`number`,`createdAt`,`updatedAt`,`typeId`) VALUES (NULL,'hama laptop','bonne','1','2022-09-02 13:39:07.586 +00:00','2022-09-02 13:39:07.586 +00:00','10');
 UPDATE `objets` SET `objetName`='pc brahim',`etat`='moyenne',`number`='10',`updatedAt`='2022-09-02 13:40:54.709 +00:00' WHERE `objectId` = '17'
 INSERT INTO `types` (`typeId`,`typeName`,`createdAt`,`updatedAt`,`userId`) VALUES (NULL,'robotique','2022-09-02 13:41:28.789 +00:00','2022-09-02 13:41:28.789 +00:00','1');
+INSERT INTO `objets` (`objectId`,`objetName`,`etat`,`number`,`createdAt`,`updatedAt`,`typeId`) VALUES (NULL,'lit','moyenne','11','2022-09-10 17:34:29.619 +00:00','2022-09-10 17:34:29.619 +00:00','30');
+UPDATE `objets` SET `objetName`='pc hp pavillonn',`etat`='bonne',`number`='211',`updatedAt`='2022-09-10 17:36:07.495 +00:00' WHERE `objectId` = '9'
+INSERT INTO `types` (`typeId`,`typeName`,`createdAt`,`updatedAt`,`userId`) VALUES (NULL,'securite','2022-10-15 21:14:33.713 +00:00','2022-10-15 21:14:33.713 +00:00','1');
+INSERT INTO `objets` (`objectId`,`objetName`,`etat`,`number`,`createdAt`,`updatedAt`,`typeId`) VALUES (NULL,'camera surveillance','moyenne','12','2022-10-15 21:16:33.690 +00:00','2022-10-15 21:16:33.690 +00:00','32');
+UPDATE `objets` SET `number`='122',`updatedAt`='2022-10-15 21:17:23.324 +00:00' WHERE `objectId` = '20'
+INSERT INTO `objets` (`objectId`,`objetName`,`etat`,`number`,`createdAt`,`updatedAt`,`typeId`) VALUES (NULL,'pc','moyenne','3','2022-12-13 15:09:47.250 +00:00','2022-12-13 15:09:47.250 +00:00','10');
+UPDATE `objets` SET `objetName`='pc hp',`etat`='bonne',`number`='6',`typeId`='32',`updatedAt`='2022-12-13 15:10:34.066 +00:00' WHERE `objectId` = '21'
+INSERT INTO `types` (`typeId`,`typeName`,`createdAt`,`updatedAt`,`userId`) VALUES (NULL,'autre','2022-12-13 15:11:15.924 +00:00','2022-12-13 15:11:15.924 +00:00','1');
+UPDATE `types` SET `typeName`='autre objet',`updatedAt`='2022-12-13 15:11:33.891 +00:00' WHERE `typeId` = '33'
+INSERT INTO `users` (`userId`,`username`,`email`,`password`,`createdAt`,`updatedAt`) VALUES (NULL,'fares','fares@gmail.com','$2a$12$rPDSiqnsyDs7iLM2SOYvx.9WuKZ0Ibb84f5mwo/Zcgb4ODr9nWHI.','2023-04-12 00:53:04.390 +00:00','2023-04-12 00:53:04.390 +00:00');
